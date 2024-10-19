@@ -1,0 +1,353 @@
+Machine Learning:
+Classification of Machine Learning
+1. Supervised Learning  ---Labeled dataset, Target column is present
+	1. Classification (Target column is Categorical)
+	2. Regression   (Target variable is Continous)
+
+2. Unsupervised Learning( Groups the dataset according to similarities, patterns and difference)
+	1. Clustering
+	2. Association
+
+3. Reinforcement learning
+
+
+Machine Learning Life Cycle:
+1. Problem Definition
+2. Gather data
+3. Data Preprocessing
+4. Data Exploration
+5. Model Building
+6. Model Evaluation
+7. Model Deployment
+
+
+Regression Analysis?
+To understand the relationship between dependent and Independent variable
+
+Type:
+1.Linear Regression
+2.Multilinear Regression
+3.Polynomial Regression
+
+
+Linear Regression
+Goal of this algorithm is to find th best fit line  using equation
+y=mx + c
+y- Dependent variable
+x- independent variable
+m - slope/coefficient
+c= Intercept
+
+Multilinear Regression- We have 2 or more independent variables 
+y=a0+ a1x1 +a2x2 +a3x3 +....+anxn
+
+Polynomial Regression
+
+y=a0+a1x1+ a2x1^2 +a3x1^3+....+anx1^n
+x2------x1^2
+x3------X1^3
+x4------X1^4
+
+
+Bias-Error caused by over assumption,  Bias should be low
+
+Variance-Senstivity of Model prediction to fluctuation in training data, Variance should be low
+
+bias is high, low variance
+bias is low , high variance
+
+Underfitting- 
+If a model has not learnt the pattern from training data well , 
+and unable to generalise well on new dara...it is underfitting
+High Bias and Low Variance
+
+
+Overfitting
+When  a model performs very well on training data and has poor performance  on test data ......Overfitting
+
+Low Bias and High Variance
+
+Ridge Regression( L2 Regularization)   lambda*slope^2
+
+Lasso Regression(L1 Regularization)- Least absolute and selection operator
+
+absolute value of Slope
+
+
+CLASSIFICATION- It is technique to identify the categories of new observation on basis of training data
+
+Types of Classification Algorithm
+1. Logistic Regression
+2. Naive Bayes Classifier
+3.K Nearest Neighbor
+4. Decision Tree
+5. Random Forest
+6. SVM- Support vector Machine
+
+
+Logistic Regression- It predict the output of categorical dependent variables
+
+Decision Tree- It is graphical representation for getting all possible solution to 
+a problem based on condition
+
+How Decision tree is Implemented?
+1. Tree Structure 
+2.It breaks down the dataset into smaller subset
+3. The Final result is the tree with Decision Node and Leaf Node
+
+
+Total Observation- 14
+
+Yes-9
+No-5
+
+Outlook
+	Sunny-5
+	Rain-5
+	Overcast-4
+
+Humid
+	High-7
+	Normal-7
+
+
+Wind
+	Weak-8
+	Strong-6
+
+
+How to select root Node
+Entropy
+Information Gain
+
+Entropy- Measure of Impurity
+
+P(Yes)-9/14
+P(No)-5/14
+
+Information gain
+
+Random Forest- It contains no of decision tress on various subset off given dataset and takes average to improve accuracy of Model
+
+
+KNN-
+It stores all the data and classifies datapoints based on similarity 
+It is also called as lazy learner
+
+
+How Does KNN Works....
+s1- Select No of Neighbors
+s2- Calculate the distance between Neighbors and New Data points
+s3- We take K neighbors as per the distance
+s4- So among the k neighbors, count the no of datapoints in each category
+s5- Assign the new datapoint to the category for which no of neighbors are maximum
+
+
+Naive Bayes -
+It is an algorithm which is based on Bayes theorem
+
+Bayes Theorem- It is the method of conditional probability that is the probability
+of one event occurring given that another event has already occurred.
+
+P(X|Y)=(P(Y|X). P(X))/P(Y)
+
+P(X|Y)- Posterior Probability- Probability of X given that Y has already occurred
+P(Y|X)-Likelihood-Probability of Y given that X has already occurred
+P(X)- Prior Probability- Probability of X
+P(Y)- Evidence- Probability of Y
+
+Total Observation-14
+Yes-9  P(Yes)-9/14
+No-5	P(NO)-5/14
+
+
+SVM-Support Vector Machine
+-Classification
+-Regression 
+
+
+2 Types :
+1. Linear SVM- Can classify dataset into two classes using straight line
+2. Non Linear SVM- Dataset cannot be classified using straight line
+
+
+HYperplane- Descision Boundary to segregate the dataset into classesin n- dimensional space
+
+Support Vectors- Datapoints which are closest to the decision boundary are supprot vectors
+
+Kernel- They are used to solve non linear problem by linear classification
+
+
+Linear Kernel-
+f(x1,x2)=x1.x2
+
+Polynomial Kernel
+f(x1,x2)=(x1.x2+1)^d
+
+Gaussain Radial Basis Function
+exp(-gamma|Xi-Xj|^2)
+
+Sigmoid Kernel
+
+OvO- One vs One (n*(n-1))/2
+OvR- One vs Rest
+
+
+Types of problem Statemnet
+Classification
+Regression
+
+Regression
+
+MSE(Mean Squared Error)
+RMSE( Root Mean Squared Error)
+MAE( Mean Absolute Error)- It is the average of absolute difference between target value and the value predicted by model.
+1/n(Summation|Y-Y^|)
+
+R- Squared Method 1-MSE(Model)/MSE(Base)
+
+Classification
+
+Confusion matrix
+TP(True Positive)-Model Correctly Predicts Positive Class
+TN(True Negative)- Model Correctly predicts Negative Class
+FP(False Positive)- An outcome where the model incorrectly predicts Positive when it is actually negative
+FN(False Negative)-An outcome where the model incorrectly predicts 
+negative when it is actually positive
+
+
+Accuracy- Total no of predictions that were correct
+Accuracy=(No of Correct Prediction/Total no of Prediction)
+Accuracy= TP+TN/(TP+TN+FP+FN)
+
+
+Precision- It tells how many of positive predicted cases turned out to be positive
+Precision=TP/TP+FP
+
+Recall/Sensitivity/TPR-True Positive Rate
+It tell out of total actual positive cases how many were correctly classified as positive
+Recall-TP/TP+FN
+
+
+Specificity-
+IT tells out of total actual negative cases how many were correctly classified as negative
+
+Specificity=(TN/TN+FP)
+
+
+F1 Score
+It is harmonic mean of precision and recall
+F1= 2(Recall*Precision)/(Recall+ Precision)
+
+AUC and ROC Curve
+AUC- Area under curve (Measure of Separability)
+ROC- Receiver Operating Characteristic(Probability Curve)
+It is plot between TPR and FPR
+FPR=1-Specificity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+Ensembling Techniques: Creates multiple model and combine their prediction to produce improved result
+Bagging
+Boosting
+
+Bagging- Bootstrap Aggregating
+
+Boosting
+
+Weak Learner-
+
+Strong Learner-
+
+1. Adaboost Algorithm
+2. Gradient Boosting
+3. Xg Boost
+
+
+TensorFlow:It is open source framework developed b Google Brain Team
+
+pip install tensorflow
+
+Tensor:It is mathematicl obect thatis asociated ith scalars, vectors and matrices
+
+Rank: It refer to no of dimension 
+	scalar-rank 0 tensor
+	vectors- rank1 tensor
+	matrices - rank 2 tensor
+Shape: It refers to size of dimension
+	shape(3,2)- 2D with 3 rows and 2 columnss
+	shape(3,2,5)- 3D with 3 matrices each with 2 rows and 5 columns
+	shape(2,)-1d with 2 elements
+	shape()-
+Data type- int, string, float,bool
+
+functions
+tf.constant()- Create tensors with constant values
+tf.variable()- create tensors whose values can be cnages during excution of program
+tf.zeros()- Create tensors with all element set to Zero
+tf.one()- Creates tensors with all element set to Ones
+tf.fill()- Creates tensors filled with a specified values
+
+
+ANN- Artificial Neural Network
+
+
+Initialization
+Activaton
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

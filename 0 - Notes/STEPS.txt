@@ -1,0 +1,22 @@
+Steps in ANN
+1 Gather Data
+2 Preprocess the Gathered Data
+3. Import  DL libraries	
+	Sequential- load/ initialise the model
+	Dense- To add the network layers
+4. Initialise the model
+5. Add Input Layers - while creating input layers you need to send some argumnets
+	( No of Input neurons, Weight Initialization Strategy, Activation function)
+6 Add Hidden Layer
+	( No of Input neurons, Weight Initialization Strategy, Activation function)
+
+7. Output Layer
+	( No of Input neurons, Weight Initialization Strategy, Activation function)
+
+	Regression( 1, relu/linear)
+	Binary( 1, Sigmoid/threshold)
+	Categoircal( based on categories you will have no of neurons , Softmax)
+8 Compile the model
+	(loss-mse/binary_crossentroy/categorical_crossentropy,Optimizer-adam, Metrics- mse(regression)/accuracy(classification)
+9.fit the model(train, batch size, no of times to train the model)
+10 test the model.

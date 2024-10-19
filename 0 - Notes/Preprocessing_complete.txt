@@ -1,0 +1,82 @@
+Data Preprocessing- To Transform the raw data into useful and efficient format
+
+Major Tasks:
+1. Data Integration
+2. Data Cleaning
+3. Data Transformation
+
+Data Cleaning
+1  Missing Values
+	Delete the row /cell
+	Impute values	
+2. Noise
+3. Handling  Outliers
+	2,3,4,6,5,8,12,20,86-- 
+	Box Plot
+4. Handling Duplicates
+5. Inconsistencies from Data
+
+Data Transformation
+1. Handling Categorical Data
+two type of Categorical Feature
+1. Nominal
+2. Ordinal
+Techniques of handling Categorical Data
+1. Map()
+2. Label Encoding
+	We have to import Label Encode class from Scikit Learn Library
+3.OneHot Encoding
+
+2. Handling Imbalance Data
+
+Imbalance Data- Dataset is imbalance if in target column , observation in one class is higher as compared to other class
+
+Class with higher Observation is Majority Class
+
+
+Class with less Observation is Minority Class
+
+Undersampling
+Oversampling
+-SMOTE- Synthetic Minority Oversampling Techniques
+
+Dimension Reduction
+Feature Engneering
+
+Scaling
+Normalisation- Min Max Scaling ( 0-1)
+Stardardisation- Standard Scaler (Mean -0, Std-1)
+
+
+Split Data
+x- Independent Feature
+y- Dependent Feature
+
+70-30/ 80-20
+Train Test Split
+Training Dataset
+Test Dataset
+
+Train- Test Split- Evaluate the performance of the Model
+
+Train Dataset- Used to train the model
+x_train- Features for training data
+y_train- Dependent variable for training data
+
+test dataset- Used to evaluate the fitted/trained model
+x_test- Features for test data
+y_test- Depedent variable for testing data (actual values)
+
+for splitting the dataset we use train_test_split()
+
+from sklearn.model_selection import train_test_split() 
+
+x_train, y_train,x_test,y_test=train_test_split(x,y,test_size=0.3,random_state=0)
+
+
+
+
+
+
+
+

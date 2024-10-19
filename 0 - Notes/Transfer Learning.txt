@@ -1,0 +1,181 @@
+Transfer Learning:
+It is technique where a model is trained on one task and it is adapted for other related tasks
+
+Pre trained Model: It is the model which has been trained on large dataset to solve a specific task so it is made available for use by others.
+
+
+Why we use pretrained models?
+1. Data Scarcity
+2. Time Efficiency
+3. Model Performance
+4. Computational Resource
+
+
+ImageNet
+-Dataset with large scale image database
+-Huge Collection if Labelled images with wide range of Object Categories
+-Created by Dr. Fei-Fei Li
+-14 Million labelled images
+-20000 Categories
+- 1 Million Images with bounding box
+
+
+ILSVRC -ImageNet Large Scale Visual Recognition Challenge
+
+-Competition designed to evaluate the performance of computer vision algorithms using subset of ImageNet Dataset
+-2010
+-Training Set- 1.2 Million Images
+-Validation Set- 50000 Images
+-Test Set- 50000 images
+-1000 classes
+
+
+Winners of Competition
+2010- Error Rate-28%
+2011- Error rate- 25%
+2012- AlexNet By Joeffry Hilton with Error rate-16%
+2013- Zfnet Error Rate-11%
+2014- VGG  Error rate-7.3%
+2015- Google Net Error rate-6.7% (Inception Model)
+2016- Resnet Error rate -3.5%
+2017- SENET-Eror rate-2-2.5%
+
+Advantage of Pretrained Model
+Reduced Training Time
+Feature Extraction
+Fine Tunning-
+
+How it works:
+
+Types:
+Feature Extraction 
+- chose  pre trained model
+- Remove the fully connected layer
+- Keep the Convolution base
+- add custom output layer
+- train the model
+
+Fine Tunning
+- Choose pretrained model
+- Remove fully connected layer
+- Unfreeze some initial layers
+- add new layer
+- Compile and train the model
+
+Pretrained Model:
+ VGG16
+ VGG19
+ Inception
+ Resnet50
+ Xception
+
+
+VGG16 Architecture:
+- In 2014 by Karen Simonyan and Andrew Zisserman from Visual Geometry Group
+-92.7%
+- It Consist of 16 Layers- 13 Convolution Layer, 3 Dense Layer (5 max Pooling layer)
+- Input Layer-224*224 with 3 RGB channel
+-Convolution Layer- 13 convolution layers with 3*3 filters
+-Max Pooling layer
+- fully connected layer
+- Output layer- Softmax Activation Function
+
+VGG19 Architecture
+- 19 Layers (16 convolution layer and 3 fully connected layer)
+- Input- 224*224 with 3 color channel
+- It contains 5 convolution blocks followed by pooling layer
+- Each convolution block has multiple convolution layers
+
+Inception
+GoogleNet by Chritian Szegedy et al
+input size-224*224*3
+Basic Inception Module Consist of 4 Parallel layers
+1. 1*1 Convolution
+2. 3*3  Convolution
+3. 5*5 Convolution
+4. 3*3 max pooling
+Auxiliary Classifier for additional supervision during the training
+22 layers
+Drawbacks of Inception Naive
+-Computation Complexity
+-Increased memory usage
+-vanishing Gradient
+
+Inception V3:
+1.Factorized Convolution
+2. Auxiliary Classifier
+3. Efficient Grid Size Reduction-
+
+iq.opengenus.org/inception-v3-model-architecture
+
+
+Resnet50
+Residual Network by Microsoft Research in  2016
+50 layers
+48 Convolution Layers, One initial Convolution layer and 1 Fully Connected layer
+
+4 main Parts- Convolution layer, Identity Block, Convolution Block and Fully Connected Layer 
+
+Input layer - 224*224*3
+Initial Convolution layer-7*7 with 64 filters, it extracts low level features from input image
+Max Pooling
+Residual Stages -4 Residual Stages
+Within Each Residual Stages there are Identity Block and Convolution Block
+
+Stage 1
+ 3 Residual block
+ 2 IB and 1 CB
+ Filters-64/256
+
+Stage 2
+ 4 Residual Block
+ 2 IB and 1 CB
+ Filter-128/512
+
+Stage 3
+6 Residual Blocks
+2 IB and 1 CB
+filter-256/1024
+
+stage 4
+3 Residual Blocks
+2 IB and 1 CB
+filters-512/2048
+
+Identity Block: It performs analysis without changing the input dimensions
+Convolution Block- This Block changes the input dimension to learn hierarchical features and adapt to different complexities in the data.
+
+Fully Connected layer with softmax function
+
+
+Xception
+Extreme Inception by Francois Chollet
+71 Convolution Layers
+In Normal Convolution- apply single filter across all channel of Input data
+Depthwise Separable Convolution- It decomposes Standard convolution into two operations
+1. Depthwise Convolution- Applies separate convolution filter to each input channel indpendently
+2. Pointwise Convolution-1*1 convolution is applied to combine the output channel from depthwise convolution
+
+Input= 299*299*3
+
+Entry Flow: It captures low level features from the input data
+
+Middle flow: It is responsible to learn all complex patterns and
+hierarchical representations
+
+Exit flow: It is responsible to make predictions on learned features
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
